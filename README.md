@@ -1,4 +1,4 @@
-### App Trader: Premise
+## App Trader: Premise
 
 Our team was hired by a fictional company called App Trader to help them explore and gain insights from apps that are made available through the Apple App Store and Android Play Store. App Trader is a broker that purchases the rights to apps from developers in order to market the apps and offer in-app purchase. App developers retain **all** money from users purchasing the app, and they retain _half_ of the money made from in-app purchases. App Trader is solely responsible for marketing apps they purchase rights to.  
 
@@ -14,25 +14,21 @@ d. For every half point that an app gains in rating, its projected lifespan incr
 
 e. App Trader would prefer to work with apps that are available in both the App Store and the Play Store since they can market both for the same $1000 per month.</blockquote>
 
+Additionally, we were asked to advise if there were any trends we could recognize based on app price, content rating, genre, or any other factor that may guide App Trader in making their purchases.
 
 Lastly, this was a group project. However, the analysis, visuals, and PowerPoint presentation in this repository were all created by me. 
 
-#### 1. Analysis
-Analysis was completed exclusively in SQL using 2 datasets: apple store data and play store data. There were a number of issues to work through, as each app store has its own ratings, price, genre and content rating. Apple's genres are much broader than the play store's, so My first step was to get data types constant across both datasets. 
+## Analysis
+Analysis was completed exclusively in SQL using 2 datasets: apple store data and play store data. There were a number of issues to work through, as each app store has its own ratings, price, genre and content rating. 
 
+My first step was to determine which apps were present in both app stores, as I assumed these would be most profitable. After some quick experimentation, I determined that trying to filter in broad strokes (e.g., only free apps with 5 star ratings present in both app stores) would not give me the most accurate results, primarily because no apps fit this criteria, and when you try to broaden it at all (e.g., lowering the star rating threshold to 4.5), you would get too many results. 
 
+I decided to simply calculate the total revenue per app and then sort them from highest to lowest profit. This involved quite a bit of arithmetic and some more complex code, but once I had this done, I could pivot to look at genres, content ratings, price, etc., to see hard numbers for which apps created the most profits. 
 
+Once analysis was complete, I exported the data to csv files to be visualized using Excel. Finally, I compiled all of my visualizations and conclusions into a PowerPoint presentation. 
 
+## How to View this Repository
 
-#### 2.  
+My SQL code is viewable in the Scripts folder. 
 
-#### 3. Deliverables
-a. Develop some general recommendations as to the price range, genre, content rating, or anything else for apps that the company should target.  
-
-b. Develop a Top 10 List of the apps that App Trader should buy next week for its **Black Friday** debut.  
-
-c. Prepare a 5-10 minute presentation for the leadership team of App Trader to inform them of your recommendations.
-
-
-
-### All analysis work must be done in PostgreSQL, however you may export query results if you want to create charts in Excel for your presentations.
+To see the completed PowerPoint presentation with all visuals, you can download the Presentation.pptx file and view in PowerPoint.
